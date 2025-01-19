@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Page</title>
-    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="style_f.css">
 </head>
 <body>
     <div class="container">
@@ -86,32 +86,68 @@
                 </div>
             </div>
         </div>
-
-    <!-- Modal for Donation Details -->
+<!-- Modal for Donation Details -->
 <div id="donation-modal" class="modal">
     <div class="modal-content">
         <span id="close-modal" class="close">&times;</span>
         <h2 id="donation-title">Enter Donation Details</h2>
         <form id="donation-form">
-            <label for="donation-quantity" id="donation-label">Quantity:</label> <!-- Label for quantity (will change dynamically) -->
-            <input type="number" id="donation-quantity" required><br><br> <!-- Input ID remains the same -->
+            <!-- Field for donation amount, only shown for "Donate Money" -->
+            <div id="amount-field" style="display: none;">
+                <label for="donation-amount">Amount:</label>
+                <input type="number" id="donation-amount" min="1" placeholder="Enter amount in INR" required>
+                <br><br>
+            </div>
+
+            <!-- Field for quantity, shown for other donation types -->
+            <div id="quantity-field" style="display: none;">
+                <label for="donation-quantity">Quantity:</label>
+                <input type="number" id="donation-quantity" min="1" placeholder="Enter quantity" required>
+                <br><br>
+            </div>
 
             <label for="donation-address">Address:</label>
-            <input type="text" id="donation-address" required><br><br>
+            <input type="text" id="donation-address" placeholder="Enter your address" required>
+            <br><br>
+
+            <label for="donation-pincode">Pincode:</label>
+            <input type="text" id="donation-pincode" pattern="\d{6}" placeholder="Enter 6-digit pincode" required>
+            <br><br>
+
+            <label for="donation-date">Pickup Date:</label>
+            <input type="date" id="donation-date" required>
+            <br><br>
+
+            <label for="donation-day">Pickup Day:</label>
+            <select id="donation-day" required>
+                <option value="">--Select a Day--</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <br><br>
 
             <label for="donation-time">Pickup Time:</label>
-            <input type="time" id="donation-time" required><br><br>
+            <input type="time" id="donation-time" required>
+            <br><br>
 
             <button type="submit">Submit</button>
         </form>
     </div>
 </div>
 
+
+
+
         <footer>
             <p>Your Donation Matters!</p>
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="javascript_f.js"></script>
 </body>
 </html>

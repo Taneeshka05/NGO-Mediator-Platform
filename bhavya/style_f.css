@@ -7,7 +7,6 @@ body {
     color: black; /* All text will be black */
     position: relative;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: black; /* Black background */
     display: flex; /* Enable flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
