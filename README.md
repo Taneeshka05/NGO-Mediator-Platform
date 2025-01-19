@@ -10,9 +10,6 @@ This platform serves as an intermediary between NGOs and donors, simplifying the
 # NGO-Mediator-Platform
 
 Workflow:
-1. Donors can offer specific items for donation through the platform.
-2. NGOs can browse and select the items they need, coordinating pickups with the donors.
-3. The platform facilitates communication and logistics between donors and NGOs, ensuring a smooth donation process.
 
 1. User Registration/Login:
 
